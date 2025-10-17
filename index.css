@@ -1,0 +1,197 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY LAYOUT ===== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  gap: 60px;
+  padding: 40px;
+}
+
+/* ===== ARTICLE CARD ===== */
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px;
+  min-height: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  color: #fff;
+}
+
+
+/* ===== HEADER STYLING ===== */
+header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f8f9fa;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+/* ===== PARAGRAPHS ===== */
+article > p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  font-style: italic;
+  color: #dcdcdc;
+  max-width: 700px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ===== SECOND PARAGRAPH SPECIAL STYLE ===== */
+article > p:nth-of-type(2) {
+  color: #7ed6df;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(126, 214, 223, 0.6);
+}
+
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  justify-content: center;
+  margin: 0 auto;      
+}
+
+figure img {
+  width: 150px;          
+  border-radius: 50%;   
+  object-fit: cover;    
+  border: 3px solid #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+[data-testid="test-user-time"] {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Social Links*/
+
+[data-testid="test-user-social-links"] {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;            
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+[data-testid="test-user-social-links"] li {
+  background-color: #f4f4f4;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+[data-testid="test-user-social-links"] li:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+[data-testid="test-user-social-twitter"] {
+  background-color: #1da1f2;
+  color: white;
+}
+
+[data-testid="test-user-social-instagram"] {
+  background: linear-gradient(45deg, #fd1d1d, #fcb045, #833ab4);
+  color: white;
+}
+
+[data-testid="test-user-social-tiktok"] {
+  background-color: #010101;
+  color: #fff;
+}
+
+[data-testid="test-user-social-facebook"] {
+  background-color: #1877f2;
+  color: white;
+}
+
+/* ===== HOBBIES & DISLIKES SECTION ===== */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;            
+  gap: 40px;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+section ul {
+  background-color: #fafafa;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px 25px;
+  width: 220px;
+  list-style: none;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section ul strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #222;
+}
+
+section ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 15px;
+  color: #444;
+  transition: 0.3s;
+}
+
+section ul li:last-child {
+  border-bottom: none;
+}
+
+section ul li:hover {
+  color: #000;
+  font-weight: 600;
+  transform: translateX(5px);
+}
