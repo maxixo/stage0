@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stage 0</title>
-  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <article data-testid="test-profile-card">
@@ -19,23 +19,39 @@
       <figcaption>HIM</figcaption>
     </figure>
 
-    <ul data-testid="test-user-social-links">
-      <li data-testid="test-user-social-twitter">Twitter</li>
-      <li data-testid="test-user-social-instagram">Instagram</li>
-      <li data-testid="test-user-social-tiktok">TikTok</li>
-      <li data-testid="test-user-social-facebook">Facebook</li>
-    </ul>
+<ul data-testid="test-user-social-links">
+  <li>
+    <button data-testid="test-user-social-twitter" onclick="window.open('https:www.twitter.com', '_blank')">
+      Twitter
+    </button>
+  </li>
+  <li>
+    <button data-testid="test-user-social-instagram" onclick="window.open('https:www.instagram.com', '_blank')">
+      Instagram
+    </button>
+  </li>
+  <li>
+    <button data-testid="test-user-social-tiktok" onclick="window.open('https:www.tiktok.com', '_blank')">
+      TikTok
+    </button>
+  </li>
+  <li>
+    <button data-testid="test-user-social-facebook" onclick="window.open('https:www.facebook.com', '_blank')">
+      Facebook
+    </button>
+  </li>
+</ul>
 
-    <section>
+ <section>
       <ul data-testid="test-user-hobbies">
-        <strong>Hobbies</strong>
+        <li>Hobbies</li>
         <li data-testid="test-user-swimming">Swimming</li>
         <li data-testid="test-user-dancing">Dancing</li>
         <li data-testid="test-user-running">Running</li>
       </ul>
 
       <ul data-testid="test-user-dislikes">
-        <strong>Dislikes</strong>
+        <li>Dislikes</li>
         <li>Cheating</li>
         <li>Stealing</li>
         <li>Profanity</li>
@@ -45,6 +61,6 @@
 
   <script>
   </script>
-  
+
 </body>
 </html>

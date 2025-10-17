@@ -1,11 +1,11 @@
-/* ===== GLOBAL RESET ===== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BODY LAYOUT ===== */
+
 body {
   display: flex;
   justify-content: center;
@@ -15,9 +15,11 @@ body {
   font-family: 'Poppins', sans-serif;
   gap: 60px;
   padding: 40px;
+overflow-x: hidden;   /* hides horizontal overflow */
+  overflow-y: auto;  
 }
 
-/* ===== ARTICLE CARD ===== */
+
 article {
   display: flex;
   flex-direction: column;
@@ -36,7 +38,7 @@ article {
 }
 
 
-/* ===== HEADER STYLING ===== */
+
 header {
   font-size: 2.2rem;
   font-weight: 700;
@@ -49,7 +51,7 @@ header {
   padding-bottom: 10px;
 }
 
-/* ===== PARAGRAPHS ===== */
+
 article > p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -60,7 +62,7 @@ article > p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* ===== SECOND PARAGRAPH SPECIAL STYLE ===== */
+
 article > p:nth-of-type(2) {
   color: #7ed6df;
   font-size: 1.2rem;
@@ -99,55 +101,57 @@ figure img {
 
 
 /* Social Links*/
-
+/* ===== SOCIAL LINKS WRAPPER ===== */
 [data-testid="test-user-social-links"] {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;            
+  flex-wrap: wrap;
   gap: 15px;
   list-style: none;
   padding: 0;
   margin: 30px 0;
 }
 
-[data-testid="test-user-social-links"] li {
-  background-color: #f4f4f4;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 600;
-  color: #333;
-  font-family: "Poppins", sans-serif;
+/* ===== SOCIAL BUTTONS ===== */
+[data-testid="test-user-social-links"] button {
+  border: none;
+  outline: none;
   cursor: pointer;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-[data-testid="test-user-social-links"] li:hover {
-  background-color: #000;
-  color: #fff;
-  transform: scale(1.05);
-}
-
+/* ===== INDIVIDUAL PLATFORM COLORS ===== */
 [data-testid="test-user-social-twitter"] {
   background-color: #1da1f2;
-  color: white;
 }
 
 [data-testid="test-user-social-instagram"] {
-  background: linear-gradient(45deg, #fd1d1d, #fcb045, #833ab4);
-  color: white;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
 }
 
 [data-testid="test-user-social-tiktok"] {
   background-color: #010101;
-  color: #fff;
 }
 
 [data-testid="test-user-social-facebook"] {
   background-color: #1877f2;
-  color: white;
 }
 
-/* ===== HOBBIES & DISLIKES SECTION ===== */
+/* ===== HOVER EFFECTS ===== */
+[data-testid="test-user-social-links"] button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+  opacity: 0.9;
+}
+
+
 section {
   display: flex;
   justify-content: center;
@@ -169,12 +173,14 @@ section ul {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-section ul strong {
+section ul li:first-child {
   display: block;
   font-size: 18px;
+  font-weight:bold;
   margin-bottom: 10px;
   text-align: center;
   color: #222;
+
 }
 
 section ul li {
@@ -194,4 +200,43 @@ section ul li:hover {
   color: #000;
   font-weight: 600;
   transform: translateX(5px);
+}
+
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  body {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  article {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  header {
+    font-size: 1.6rem;
+  }
+
+  figure img {
+    width: 120px;
+    height: 120px;
+  }
+
+  article > p {
+    font-size: 1rem;
+  }
+  section {
+    flex-wrap: wrap;
+    overflow-x: auto;
+  }
+
+  [data-testid="test-user-social-links"] {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
 }
