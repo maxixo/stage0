@@ -15,7 +15,7 @@ body {
   font-family: 'Poppins', sans-serif;
   gap: 60px;
   padding: 40px;
-overflow-x: hidden;   /* hides horizontal overflow */
+overflow-x: hidden;  
   overflow-y: auto;  
 }
 
@@ -27,9 +27,8 @@ article {
   gap: 30px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
-  width: 100%;
-  max-width: 900px;
-  min-height: 600px;
+  width: 600px;
+  min-height: 500px;
   background: rgba(255, 255, 255, 0.05);
   padding: 50px 40px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
@@ -74,19 +73,21 @@ article > p:nth-of-type(2) {
 
 figure {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;   
   justify-content: center;
-  margin: 0 auto;      
+  gap: 50px;    
 }
 
 figure img {
-  width: 150px;          
+  width: 180px;    
+  height:90px;      
   border-radius: 50%;   
   object-fit: cover;    
   border: 3px solid #000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
+  margin-left: 50px;
 }
 
 [data-testid="test-user-time"] {
@@ -101,7 +102,6 @@ figure img {
 
 
 /* Social Links*/
-/* ===== SOCIAL LINKS WRAPPER ===== */
 [data-testid="test-user-social-links"] {
   display: flex;
   justify-content: center;
@@ -203,7 +203,20 @@ section ul li:hover {
 }
 
 
-
+#test-time {
+            font-size: 24px;
+            color: #667eea;
+            font-weight: bold;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+  .label {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -220,10 +233,16 @@ section ul li:hover {
   header {
     font-size: 1.6rem;
   }
-
+ 
+  figure {
+    display: flex;
+    flex-direction: column;
+  }
   figure img {
     width: 120px;
     height: 120px;
+    margin-right: 50px;
+    margin-top: 20px;
   }
 
   article > p {
@@ -240,3 +259,4 @@ section ul li:hover {
   }
 
 }
+

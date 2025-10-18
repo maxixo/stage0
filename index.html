@@ -1,66 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stage 0</title>
-  <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
-  <article data-testid="test-profile-card">
-    <header data-testid="test-user-name">Usman</header>
-    <p data-testid="test-user-bio">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, hic!
-    </p>
-    <p data-testid="test-user-time">Current time:</p>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stage 0</title>
+        <link rel="stylesheet" href="/styles/style.css">
+      </head>
+      <body>
+        <article data-testid="test-profile-card">
+          <header data-testid="test-user-name">Usman</header>
+          <p data-testid="test-user-bio">Welcome to my profile card  </p>
+          <p data-testid="test-user-time " id="test-time">Current time:</p>
 
-    <figure>
-      <img src="https://zxlksbiurttzrwxvgryi.supabase.co/storage/v1/object/public/images/Gemini_Generated_Image_axx8qeaxx8qeaxx8.png" alt="Profile picture">
-      <figcaption>HIM</figcaption>
-    </figure>
+          <figure>
+            <img src="https://zxlksbiurttzrwxvgryi.supabase.co/storage/v1/object/public/images/Gemini_Generated_Image_axx8qeaxx8qeaxx8.png" alt="Profile picture">
+            <figcaption> My expertise is html , css , javascript , react , tailwind , threeJS , supabase and nodeJS.
+          </figure>
 
-<ul data-testid="test-user-social-links">
-  <li>
-    <button data-testid="test-user-social-twitter" onclick="window.open('https://www.twitter.com', '_blank')">
-      Twitter
-    </button>
-  </li>
-  <li>
-    <button data-testid="test-user-social-instagram" onclick="window.open('https://www.instagram.com', '_blank')">
-      Instagram
-    </button>
-  </li>
-  <li>
-    <button data-testid="test-user-social-tiktok" onclick="window.open('https:www.//tiktok.com', '_blank')">
-      TikTok
-    </button>
-  </li>
-  <li>
-    <button data-testid="test-user-social-facebook" onclick="window.open('https:www.//facebook.com', '_blank')">
-      Facebook
-    </button>
-  </li>
-</ul>
-
- <section>
-      <ul data-testid="test-user-hobbies">
-        <li>Hobbies</li>
-        <li data-testid="test-user-swimming">Swimming</li>
-        <li data-testid="test-user-dancing">Dancing</li>
-        <li data-testid="test-user-running">Running</li>
+      <ul data-testid="test-user-social-links">
+        <li>
+          <button  rel="noopener noreferrer" data-testid="test-user-social-twitter" onclick="window.open('https://www.twitter.com', '_blank')">
+            Twitter
+          </button>
+        </li>
+        <li>
+          <button  rel="noopener noreferrer" data-testid="test-user-social-instagram" onclick="window.open('https://www.instagram.com', '_blank')">
+            Instagram
+          </button>
+        </li>
+        <li>
+          <button  rel="noopener noreferrer" data-testid="test-user-social-tiktok" onclick="window.open('https:www.//tiktok.com', '_blank')">
+            TikTok
+          </button>
+        </li>
+        <li>
+          <button  rel="noopener noreferrer" data-testid="test-user-social-facebook" onclick="window.open('https:www.//facebook.com', '_blank')">
+            Facebook
+          </button>
+        </li>
       </ul>
 
-      <ul data-testid="test-user-dislikes">
-        <li>Dislikes</li>
-        <li>Cheating</li>
-        <li>Stealing</li>
-        <li>Profanity</li>
-      </ul>
-    </section>
-  </article>
+      <section>
+            <ul data-testid="test-user-hobbies">
+              <li>Hobbies</li>
+              <li data-testid="test-user-swimming">Swimming</li>
+              <li data-testid="test-user-dancing">Dancing</li>
+              <li data-testid="test-user-running">Running</li>
+            </ul>
 
-  <script>
-  </script>
+            <ul data-testid="test-user-dislikes">
+              <li>Dislikes</li>
+              <li>Cheating</li>
+              <li>Stealing</li>
+              <li>Profanity</li>
+            </ul>
+          </section>
+        </article>
 
-</body>
-</html>
+        <script>
+              let intervalId;
+              let isPaused = false;
+              
+              // Function to update time display
+              function updateTime() {
+                  const currentTime = Date.now();
+                  const timeStr = currentTime.toString();
+                  
+                  // Get last 8 digits and format with colons
+                  const last8 = timeStr.slice(-8);
+                  const formatted = last8.slice(0, 2) + ':' + last8.slice(2, 4) + ':' + last8.slice(4, 6) + ':' + last8.slice(6, 8);
+                  
+                  document.getElementById('test-time').textContent = formatted;
+              }
+              
+              // Function to start the timer
+              function startTimer() {
+                  intervalId = setInterval(updateTime, 100);
+              }
+              
+              // Function to stop the timer
+              function stopTimer() {
+                  clearInterval(intervalId);
+              }
+              
+              // Display time immediately on load
+              updateTime();
+              
+              // Start updating automatically
+              startTimer();
+              
+          
+            
+        </script>
+
+      </body>
+      </html>
