@@ -1,0 +1,141 @@
+:root{
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.08);
+  --accent: #7ed6df;
+  --accent-2: #667eea;
+  border:0
+}
+
+body { 
+      font-family: 'Poppins', sans-serif;
+       color: #ffffff;
+        margin: auto; 
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+ }
+main {
+  border: 0;
+}
+
+main > h2 {
+  text-align: center;
+}
+
+/* Basic styles for the About Me contact form */
+form {
+  max-width: 520px;
+  margin: 1.5rem auto;
+  border:0;
+  border-radius: 14px;
+  padding: 22px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
+  backdrop-filter: blur(8px) saturate(120%);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  background: rgba(255,255,255,0.03);
+  color: #ffffff;
+}
+
+form::before{
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -30%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle at center, rgba(126,214,223,0.06), transparent 40%);
+  transform: rotate(25deg);
+}
+
+form:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.6), 0 6px 20px rgba(102,126,234,0.06);
+}
+
+fieldset {
+  border: 0;
+}
+
+form p { margin-bottom: 0.75rem; }
+label { display: block; margin-bottom: 15px; font-weight: 300; }
+input[type="text"], input[type="email"], textarea[id="message"] {
+  max-width: 100%;
+  width:450px;
+  height: auto;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 0.6rem;
+  border: 0px solid rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.879);
+  overflow: hidden;
+  color: #000000;
+  border-radius: 6px;
+  font-size: large;
+  box-sizing: border-box;
+  resize: none;     
+          /* disables user resize */
+
+}
+
+textarea[id="subject"] {
+  font-size: large;
+  color: #000000;
+  max-width: 100%;
+  width:430px;
+  height: 50px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  resize: none;     
+  overflow: hidden;
+
+
+}
+
+
+button[type="submit"] {
+  background: #5cb205;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.form-message {
+  margin-top: 0.5rem;
+  min-height: 1.25rem;
+  opacity: 0;
+  transition: opacity 180ms ease-in-out;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  box-sizing: border-box;
+  background: transparent; /* keep card look */
+  border-radius: 6px;
+}
+.form-message.visible { opacity: 1; }
+.form-message.error { color: #ff7675; }
+.form-message.success { color: #7bed9f; }
+
+/* field-error uses same horizontal rhythm as inputs */
+.field-error{
+  display:block;
+  width:100%;
+  padding: 0.25rem 0.6rem;
+  box-sizing: border-box;
+  color: #ff7675;
+  font-size: 0.95rem;
+  min-height: 1.1em;
+}
+
+/* visually hidden helper */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
