@@ -9,13 +9,20 @@
       <body>
         <article data-testid="test-profile-card">
           <header data-testid="test-user-name">Usman</header>
-          <p data-testid="test-user-bio">Welcome to my profile card  </p>
-          <p data-testid="test-user-time " id="test-time">Current time:</p>
 
+          <p data-testid="test-user-bio">Welcome to my profile card  </p>
+           
+   
           <figure>
             <img src="https://zxlksbiurttzrwxvgryi.supabase.co/storage/v1/object/public/images/Gemini_Generated_Image_axx8qeaxx8qeaxx8.png" alt="Profile picture">
             <figcaption> My expertise is html , css , javascript , react , tailwind , threeJS , supabase and nodeJS.
           </figure>
+
+          <div class="time">
+          <p>Current time    </p>
+           <p data-testid="test-user-time " id="test-time"> </p>
+          </div>
+
 
       <ul data-testid="test-user-social-links">
         <li>
@@ -68,7 +75,7 @@
                   
                   // Get last 8 digits and format with colons
                   const last8 = timeStr.slice(-8);
-                  const formatted = last8.slice(0, 2) + ':' + last8.slice(2, 4) + ':' + last8.slice(4, 6) + ':' + last8.slice(6, 8);
+                  const formatted = last8.slice(0, 2) + ':' + last8.slice(2, 4) + ':' + last8.slice(4, 6) + ':' + last8.slice(6, 8); 
                   
                   document.getElementById('test-time').textContent = formatted;
               }

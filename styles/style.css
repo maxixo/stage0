@@ -70,6 +70,14 @@ article > p:nth-of-type(2) {
   text-shadow: 0 0 8px rgba(126, 214, 223, 0.6);
 }
 
+.time {
+  display: flex;
+  width: 300px;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
 
 figure {
   display: flex;
@@ -91,13 +99,14 @@ figure img {
   margin-left: 50px;
 }
 
-[data-testid="test-user-time"] {
+[data-testid="test-user-time"] > p {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 200;
   color: #555;
   text-align: center;
   margin-bottom: 15px;
   font-family: "Poppins", sans-serif;
+  background-color: none;
 }
 
 
