@@ -9,7 +9,7 @@
 <body>
 
 <main>
-  <h2>About — Contact</h2>
+  <h2>Contact Us</h2>
 
  <form action="#" method="post" novalidate aria-labelledby="contact-heading">
     <h2 id="contact-heading" class="visually-hidden">Contact form</h2>
@@ -18,27 +18,29 @@
     <p>
   <label for="full-name"  data-testid="test-contact-name">FULL NAME :</label>
   <input type="text" id="full-name" name="full-name" autocomplete="name" required aria-describedby="full-name-error">
-  <span id="full-name-error" class="field-error" aria-live="polite"></span>
+  <span data-testid="test-contact-error-full-name" class="field-error" aria-live="polite"></span>
    </p>
     <p>
-  <label for="mail"  data-testid="test-contact-email">EMAIL:</label>
+  <label for="user_email"  data-testid="test-contact-email">EMAIL:</label>
   <input type="email" id="mail" name="user_email" autocomplete="email" required aria-describedby="mail-error" />
-  <span id="mail-error" class="field-error" aria-live="polite"></span>
+  <span data-testid="test-contact-error-email" class="field-error" aria-live="polite"></span>
   </p>
   <p>
-  <label for="subject" data-testid="test-contact-subject" >SUBJECT:</label>
+  <label for="user_subject" data-testid="test-contact-subject" >SUBJECT:</label>
   <textarea id="subject" name="user_subject" rows="2" required aria-describedby="subject-error"></textarea>
-  <span id="subject-error" class="field-error" aria-live="polite"></span>
+  <span data-testid="test-contact-error-subject" class="field-error" aria-live="polite"></span>
   </p>
     <p>
-  <label for="message" data-testid="test-contact-message" >MESSAGE:</label>
+  <label for="user_message" data-testid="test-contact-message" >MESSAGE:</label>
   <textarea id="message" name="user_message" rows="5" required aria-describedby="message-error"></textarea>
-  <span id="message-error" class="field-error" aria-live="polite"></span>
+  <span data-testid="test-contact-error-message" class="field-error" aria-live="polite"></span>
   </p>
     </fieldset>
 
-    <input type="text" class="visually-hidden" name="submit" aria-labelledby="submitbutton">
-    <button type="submit">Send message</button>
+    <div class="form-actions">
+      <input type="text" class="visually-hidden" name="submit" aria-labelledby="submitbutton">
+      <button type="submit">Send message</button>
+    </div>
 
     <p data-testid="test-contact-error-email" id="error" role="status" aria-live="polite" class="form-message error"></p>
    <p data-testid="test-contact-success" id="valid" role="status" aria-live="polite" class="form-message success"></p>

@@ -8,21 +8,23 @@
 
 body { 
       font-family: 'Poppins', sans-serif;
-       color: #ffffff;
-        margin: auto; 
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      margin: auto; 
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
  }
 main {
   border: 0;
+  position: relative;
 }
 
 main > h2 {
   text-align: center;
+  position: relative;
 }
 
 /* Basic styles for the About Me contact form */
 form {
-  max-width: 520px;
+  width: 520px;
   margin: 1.5rem auto;
   border:0;
   border-radius: 14px;
@@ -73,7 +75,9 @@ input[type="text"], input[type="email"], textarea[id="message"] {
   border-radius: 6px;
   font-size: large;
   box-sizing: border-box;
-  resize: none;     
+  resize: none;  
+    font-weight: bold; 
+  
           /* disables user resize */
 
 }
@@ -89,6 +93,7 @@ textarea[id="subject"] {
   border-radius: 8px;
   resize: none;     
   overflow: hidden;
+  font-weight: bold; 
 
 
 }
@@ -101,7 +106,6 @@ button[type="submit"] {
   padding: 0.6rem 1rem;
   border-radius: 6px;
   cursor: pointer;
-  margin-left: 12px;
 }
 
 .form-message {
@@ -139,3 +143,32 @@ button[type="submit"] {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap; /* added line */
 }
+
+/* Form actions wrapper: right-align on wide screens, stack on small */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .form-actions { flex-direction: column-reverse; align-items: center; }
+  .form-actions button { width: 100%; }
+
+  main > h2 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    /* fluid scaling between 1.2rem and 2rem across viewport widths */
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    line-height: 1.2;
+    padding: 0 12px;
+  }
+}
+
+/* Slightly reduce and adjust the main h2 on small/medium screens */
+@media (max-width: 420px) {
+  main > h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+}
+
