@@ -183,7 +183,7 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
-/* Card action buttons (About / Contact) - futuristic glass style */
+/* Card action buttons (About / Contact)  */
 .card-actions {
   display: flex;
   gap: 12px;

@@ -148,6 +148,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // If we reach here, the form is valid.
     showSuccess('Thanks — your message looks good!');
 
-    // TODO: actually submit via fetch/ajax or remove preventDefault to allow normal submission
   });
 });

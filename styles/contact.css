@@ -198,9 +198,7 @@ button[type="submit"]:active {
   margin-top: 8px;
 }
 
-/* ========================================
-   RESPONSIVE MEDIA QUERIES
-   ======================================== */
+/* RESPONSIVE MEDIA QUERIES */
 
 /* XL devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
