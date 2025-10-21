@@ -90,56 +90,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!nameVal) {
       const msg = 'Please enter your full name.';
-      showError(msg);
+      // field-level error
       if (nameError) nameError.textContent = msg;
-      name.setAttribute('aria-invalid', 'true');
-      name.focus();
+      if (name) name.setAttribute('aria-invalid', 'true');
+      name && name.focus();
+      // update global error if needed
+      showError('There are errors in the form. Please fix them and try again.');
       return;
     }
 
     if (!emailVal) {
       const msg = 'Please enter your email address.';
-      showError(msg);
       if (mailError) mailError.textContent = msg;
-      email.setAttribute('aria-invalid', 'true');
-      email.focus();
+      if (email) email.setAttribute('aria-invalid', 'true');
+      email && email.focus();
+      showError('There are errors in the form. Please fix them and try again.');
       return;
     }
 
     if (!isValidEmail(emailVal)) {
       const msg = 'Please enter a valid email address.';
-      showError(msg);
       if (mailError) mailError.textContent = msg;
-      email.setAttribute('aria-invalid', 'true');
-      email.focus();
+      if (email) email.setAttribute('aria-invalid', 'true');
+      email && email.focus();
+      showError('There are errors in the form. Please fix them and try again.');
       return;
     }
 
     if (!subject || !subject.value.trim()) {
       const msg = 'Please enter a subject.';
-      showError(msg);
       if (subjectError) subjectError.textContent = msg;
       if (subject) subject.setAttribute('aria-invalid', 'true');
-      if (subject) subject.focus();
+      subject && subject.focus();
+      showError('There are errors in the form. Please fix them and try again.');
       return;
     }
 
 
     if (!messageVal) {
       const msg = 'Please enter a message.';
-      showError(msg);
       if (messageError) messageError.textContent = msg;
-      message.setAttribute('aria-invalid', 'true');
-      message.focus();
+      if (message) message.setAttribute('aria-invalid', 'true');
+      message && message.focus();
+      showError('There are errors in the form. Please fix them and try again.');
       return;
     }
 
     if (messageVal.length < 10) {
       const msg = 'Your message must be at least 10 characters long.';
-      showError(msg);
       if (messageError) messageError.textContent = msg;
-      message.setAttribute('aria-invalid', 'true');
-      message.focus();
+      if (message) message.setAttribute('aria-invalid', 'true');
+      message && message.focus();
+      showError('There are errors in the form. Please fix them and try again.');
       return;
     }
 
